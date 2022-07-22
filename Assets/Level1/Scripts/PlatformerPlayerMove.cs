@@ -18,13 +18,11 @@ namespace Assets.Level1.Scripts
         private void ChecKeyCode()
         {
             if (Input.GetKeyDown(KeyCode.Space))
-            {
                 TryDoJump();
-            }  
         }
         private void TryDoJump()
         {
-            if (_currentJumps < _maxNumberOfJumps )
+            if (_currentJumps < _maxNumberOfJumps)
             {
                 _rigidbody.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
                 _currentJumps++;
@@ -38,9 +36,9 @@ namespace Assets.Level1.Scripts
         public void CheckCurrentJumps()
         {
             if (_currentJumps == _maxNumberOfJumps && _collisionChecker.IsGrounded)
-            {
                 _currentJumps = 0;
-            }
         }
+        public void EnableDoubleJump() => 
+            _maxNumberOfJumps = 2;
     }
 }

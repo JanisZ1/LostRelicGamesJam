@@ -11,15 +11,12 @@ namespace Assets.Menu.Scripts
         public GameObject[] SceneObjects;
         public virtual void Start()
         {
+            Cursor.lockState = CursorLockMode.None;
             OnLevelCompleted += EnableLevel;
         }
-        public void EnableLevel()
-        {
+        public void EnableLevel() => 
             OnLevelCompleted -= EnableLevel;
-        }
-        public void TryEnterLevel(string sceneName)
-        {
+        public void TryEnterLevel(string sceneName) => 
             SceneManager.LoadSceneAsync(sceneName);
-        }
     }
 }

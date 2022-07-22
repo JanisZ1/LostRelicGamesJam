@@ -447,7 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goalScoreText: {fileID: 919309321}
   _currentScoreText: {fileID: 1581536244}
-  _goalScore: 200
+  _goalScore: 100
 --- !u!1 &659591265
 GameObject:
   m_ObjectHideFlags: 0

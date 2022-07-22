@@ -1,48 +1,43 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class WinCondition : MonoBehaviour
+namespace Assets.Level4.Scripts
 {
-    [SerializeField] private TextMeshProUGUI _winText;
-    [SerializeField] private SurviveTimer _surviveTimer;
-    private bool _winkeysEnabled;
-    private void Start()
+    public class WinCondition : MonoBehaviour
     {
-        Time.timeScale = 1;
-        _surviveTimer.Onwin += EnableText;
-        _surviveTimer.Onwin += EnableWinKeys;
-        
-    }
-    
-    private void EnableText()
-    {
-        _winText.enabled = true;
-    }
-    private void EnableWinKeys()
-    {
-        _winkeysEnabled = true;
-    }
-    private void Update()
-    {
-        if (_winkeysEnabled)
+        [SerializeField] private TextMeshProUGUI _winText;
+        [SerializeField] private SurviveTimer _surviveTimer;
+        private bool _winkeysEnabled;
+        private void Start()
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            Time.timeScale = 1;
+            _surviveTimer.Onwin += EnableText;
+            _surviveTimer.Onwin += EnableWinKeys;
+        }
+
+        private void EnableText() =>
+            _winText.enabled = true;
+        private void EnableWinKeys() =>
+            _winkeysEnabled = true;
+        private void Update()
+        {
+            if (_winkeysEnabled)
             {
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-            }
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                SceneManager.LoadSceneAsync("Menu");
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+                }
+                if (Input.GetKeyDown(KeyCode.M))
+                {
+                    SceneManager.LoadSceneAsync("Menu");
+                }
             }
         }
-           
-        
-    }
-    private void OnDisable()
-    {
-        _surviveTimer.Onwin -= EnableText;
-        _surviveTimer.Onwin -= EnableWinKeys;
-        
+        private void OnDisable()
+        {
+            _surviveTimer.Onwin -= EnableText;
+            _surviveTimer.Onwin -= EnableWinKeys;
+        }
     }
 }
+

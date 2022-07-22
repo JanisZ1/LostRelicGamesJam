@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
+using Random = UnityEngine.Random;
 
 namespace Assets.Level2.Scripts
 {
@@ -8,12 +10,13 @@ namespace Assets.Level2.Scripts
     {
         [SerializeField] private Food _foodPrefab;
         [SerializeField] private SnakeIntersectionChecker _snakeIntersectionChecker;
-        public List<Vector3Int> SpawnedFoodPositions = new List<Vector3Int>();
-        public List<Transform> SpawnedFood = new List<Transform>();
+        private List<Vector3Int> _spawnedFoodPositions = new List<Vector3Int>();
+        [SerializeField] private List<Transform> _spawnedFood = new List<Transform>();
         [SerializeField] private List<Vector3Int> _allPositions = new List<Vector3Int>();
+        public event Action OnFoodSpawn;
         private void Start()
         {
-            SpawnedFoodPositions.Add(Vector3Int.RoundToInt(SpawnedFood[0].position));
+            _spawnedFoodPositions.Add(Vector3Int.RoundToInt(_spawnedFood[0].position));
 
             _snakeIntersectionChecker.OnFoodEat += SpawnNewFood;
             for (int x = 0; x < 21; x++)
@@ -24,17 +27,31 @@ namespace Assets.Level2.Scripts
                 }
             }
         }
+
         private void DestroyEatedFood(Vector3Int foodPosition)
         {
-            for (int i = 0; i < SpawnedFood.Count; i++)
+            for (int i = 0; i < _spawnedFood.Count; i++)
             {
-                if (foodPosition == Vector3Int.RoundToInt(SpawnedFood[i].transform.position))
+                if (foodPosition == Vector3Int.RoundToInt(_spawnedFood[i].transform.position))
                 {
-                    Destroy(SpawnedFood[i].gameObject);
-                    SpawnedFoodPositions.Remove(foodPosition);
-                    SpawnedFood.Remove(SpawnedFood[i]);
+                    Destroy(_spawnedFood[i].gameObject);
+                    _spawnedFoodPositions.Remove(foodPosition);
+                    _spawnedFood.Remove(_spawnedFood[i]);
                 }
             }
+        }
+
+        private void OnDisable() =>
+            _snakeIntersectionChecker.OnFoodEat -= SpawnNewFood;
+        public IEnumerable<Transform> GetFood()
+        {
+            foreach (var food in _spawnedFood)
+                yield return food;
+        }
+        public IEnumerable<Vector3Int> GetFoodPositions()
+        {
+            foreach (var food in _spawnedFoodPositions)
+                yield return food;
         }
         public void SpawnNewFood(Vector3Int foodPosition, List<Vector3Int> snakePositions)
         {
@@ -47,10 +64,9 @@ namespace Assets.Level2.Scripts
             var randomPosition = freePositions.ElementAt(randomValue);
             Debug.Log(count);
             Food newFood = Instantiate(_foodPrefab, randomPosition, Quaternion.identity);
-            SpawnedFoodPositions.Add(Vector3Int.RoundToInt(newFood.transform.position));
-            SpawnedFood.Add(newFood.transform);
+            _spawnedFoodPositions.Add(Vector3Int.RoundToInt(newFood.transform.position));
+            _spawnedFood.Add(newFood.transform);
+            OnFoodSpawn?.Invoke();
         }
-        private void OnDisable() =>
-            _snakeIntersectionChecker.OnFoodEat -= SpawnNewFood;
     }
 }

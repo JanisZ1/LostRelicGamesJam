@@ -2,17 +2,19 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class TextHider : MonoBehaviour
+namespace Assets.Level4.Scripts
 {
-    [SerializeField] private TextMeshProUGUI _text;
-    public event Action OnTextHide;
-    private void Start()
+    public class TextHider : MonoBehaviour
     {
-        Invoke(nameof(HideText), 3f);
-    }
-    private void HideText()
-    {
-        _text.enabled = false;
-        OnTextHide?.Invoke();
+        [SerializeField] private TextMeshProUGUI _text;
+        public event Action OnTextHide;
+        private void Start() => 
+            Invoke(nameof(HideText), 3f);
+        private void HideText()
+        {
+            _text.enabled = false;
+            OnTextHide?.Invoke();
+        }
     }
 }
+

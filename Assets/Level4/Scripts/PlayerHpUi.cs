@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+
 namespace Assets.Level4.Scripts
 {
     public class PlayerHpUi : MonoBehaviour
@@ -10,11 +11,13 @@ namespace Assets.Level4.Scripts
         private void Start()
         {
             _hpStartText = _hpText.text;
+            SetHpUi(_playerHealth.Health);
             _playerHealth.OnTakeDamage += SetHpUi;
         }
-        private void SetHpUi(int health) => 
+        private void SetHpUi(int health) =>
             _hpText.text = _hpStartText + health.ToString();
-        private void OnDisable() => 
+
+        private void OnDisable() =>
             _playerHealth.OnTakeDamage -= SetHpUi;
     }
 }

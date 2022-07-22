@@ -12,29 +12,29 @@ namespace Assets.Level3.Scripts
         private static Transform[,] _grid = new Transform[Width, Height];
         [SerializeField] private ScoreManager _scoreManager;
 
-        private void Start() => 
+        private void Start() =>
             _scoreManager = FindObjectOfType<ScoreManager>();
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 transform.position += Vector3.left;
                 if (!ValidMove())
                     transform.position -= Vector3.left;
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 transform.position += Vector3.right;
                 if (!ValidMove())
                     transform.position -= Vector3.right;
             }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 transform.Rotate(0, 0, 90f);
                 if (!ValidMove())
                     transform.Rotate(0, 0, -90f);
             }
-            if (Time.time - _previousTime > (Input.GetKey(KeyCode.S) ? _fallTime / 10 : _fallTime))
+            if (Time.time - _previousTime > (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) ? _fallTime / 10 : _fallTime))
             {
                 transform.position += Vector3.down;
                 if (!ValidMove())
@@ -87,7 +87,7 @@ namespace Assets.Level3.Scripts
                     {
                         _grid[x, y - 1] = _grid[x, y];
                         _grid[x, y] = null;
-                        _grid[x, y - 1].transform.position -= Vector3.up;
+                        _grid[x, y - 1].transform.position += Vector3.down;
                     }
                 }
             }

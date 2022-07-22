@@ -8,6 +8,7 @@ namespace Assets.Level4.Scripts
         private float _mouseX;
         private float _mouseY;
         private Camera _camera;
+        [SerializeField] private LayerMask _whatpassesThroughCamera;
         private void Start() => 
             _camera = Camera.main;
         private void Update()
