@@ -16,7 +16,7 @@ namespace Assets.Level2.Scripts
         public event Action OnFoodSpawn;
         private void Start()
         {
-            _spawnedFoodPositions.Add(Vector3Int.RoundToInt(_spawnedFood[0].position));
+            _spawnedFoodPositions.Add(_spawnedFood[0].position.ToVector3Int());
 
             _snakeIntersectionChecker.OnFoodEat += SpawnNewFood;
             for (int x = 0; x < 21; x++)
@@ -32,7 +32,7 @@ namespace Assets.Level2.Scripts
         {
             for (int i = 0; i < _spawnedFood.Count; i++)
             {
-                if (foodPosition == Vector3Int.RoundToInt(_spawnedFood[i].transform.position))
+                if (foodPosition == _spawnedFood[i].transform.position.ToVector3Int())
                 {
                     Destroy(_spawnedFood[i].gameObject);
                     _spawnedFoodPositions.Remove(foodPosition);
@@ -64,7 +64,7 @@ namespace Assets.Level2.Scripts
             var randomPosition = freePositions.ElementAt(randomValue);
             Debug.Log(count);
             Food newFood = Instantiate(_foodPrefab, randomPosition, Quaternion.identity);
-            _spawnedFoodPositions.Add(Vector3Int.RoundToInt(newFood.transform.position));
+            _spawnedFoodPositions.Add(newFood.transform.position.ToVector3Int());
             _spawnedFood.Add(newFood.transform);
             OnFoodSpawn?.Invoke();
         }

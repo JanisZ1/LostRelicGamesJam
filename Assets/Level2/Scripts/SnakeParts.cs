@@ -12,17 +12,17 @@ namespace Assets.Level2.Scripts
         private void Start()
         {
             foreach (Transform snake in _snakeParts)
-                SnakepartsPositions.Add(Vector3Int.RoundToInt(snake.position));
+                SnakepartsPositions.Add(snake.position.ToVector3Int());
         }
         public void AddSnakePartToLists(Transform newPart)
         {
             _snakeParts.Add(newPart);
-            SnakepartsPositions.Add(Vector3Int.RoundToInt(newPart.position));
+            SnakepartsPositions.Add(newPart.position.ToVector3Int());
         }
 
         public void Move(Vector3 position)
         {
-            SnakepartsPositions.Insert(0, Vector3Int.RoundToInt(position));
+            SnakepartsPositions.Insert(0, position.ToVector3Int());
             SnakepartsPositions.RemoveAt(SnakepartsPositions.Count - 1);
             for (int i = 0; i < _snakeParts.Count; i++)
                 _snakeParts[i].position = new Vector3(SnakepartsPositions[i].x, SnakepartsPositions[i].y, 0);

@@ -23,7 +23,7 @@ namespace Assets.Level2.Scripts
             _foodPositions = _foodSpawner.GetFoodPositions().ToList();
         private void RefreshPositions()
         {
-            _snakeHeadPosition = Vector3Int.RoundToInt(_snakeMove.transform.position);
+            _snakeHeadPosition = _snakeMove.transform.position.ToVector3Int();
             OnDataChange?.Invoke(_snakeHeadPosition, _foodPositions);
         }
         private void OnDisable() =>

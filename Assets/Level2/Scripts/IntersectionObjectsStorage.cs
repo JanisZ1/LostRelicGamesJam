@@ -29,7 +29,7 @@ namespace Assets.Level2.Scripts
             for (int i = 0; i < wallsToDelete.Count; i++)
             {
                 Destroy(wallsToDelete[i].gameObject);
-                WallPositions.Remove(Vector3Int.RoundToInt(wallsToDelete[i].transform.position));
+                WallPositions.Remove(wallsToDelete[i].transform.position.ToVector3Int());
             }
             for (int i = 0; i < wallsToDelete.Count; i++)
             {
@@ -41,11 +41,11 @@ namespace Assets.Level2.Scripts
         {
             _walls = FindObjectsOfType<Wall>().ToList();
             for (int i = 0; i < _walls.Count; i++)
-                WallPositions.Add(Vector3Int.RoundToInt(_walls[i].transform.position));
+                WallPositions.Add(_walls[i].transform.position.ToVector3Int());
         }
         private void RefreshPositionOfSnake()
         {
-            _snakeHeadPosition = Vector3Int.RoundToInt(_snakeMove.transform.position);
+            _snakeHeadPosition = _snakeMove.transform.position.ToVector3Int();
             SnakePositions = _snakeParts.SnakepartsPositions;
             OnDataChange?.Invoke(_snakeHeadPosition, WallPositions);
             OnDataChange?.Invoke(_snakeHeadPosition, SnakePositions);
