@@ -22,7 +22,6 @@ namespace Assets.Level1.Scripts
                         if (_takenPiece)
                         {
                             _pieceIsTaken = true;
-                            _takenPiece.GetComponent<SpriteRenderer>().sortingOrder++;
                         }
 
                     }
@@ -38,7 +37,6 @@ namespace Assets.Level1.Scripts
             {
                 if (_takenPiece != null)
                 {
-                    //_takenPiece.GetComponent<SpriteRenderer>().sortingOrder--;
                     if (_takenPiece.GetComponent<Collider2D>().enabled)
                     {
                         _takenPiece.CheckDistanceToRightPosition();
