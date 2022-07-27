@@ -14,15 +14,6 @@ namespace Assets.Level2.Scripts
         [SerializeField] private int _exitYPosition = -1;
         private void Start() =>
             _saveLoadSystem = FindObjectOfType<SaveLoadSystem>();
-        public void Move(Vector3 direction)
-        {
-            Vector3 positionBeforeMove = transform.position;
-            transform.position += direction;
-            _snakeParts.Move(positionBeforeMove);
-            OnMove?.Invoke();
-            CheckExit();
-        }
-
         private void CheckExit()
         {
             if (transform.position.y < _exitYPosition)
@@ -30,6 +21,14 @@ namespace Assets.Level2.Scripts
                 _saveLoadSystem.SaveCompletedLevel();
                 SceneManager.LoadSceneAsync(_levelName);
             }
+        }
+        public void Move(Vector3 direction)
+        {
+            Vector3 positionBeforeMove = transform.position;
+            transform.position += direction;
+            _snakeParts.Move(positionBeforeMove);
+            OnMove?.Invoke();
+            CheckExit();
         }
     }
 }
