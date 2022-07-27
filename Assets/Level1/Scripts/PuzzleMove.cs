@@ -6,7 +6,6 @@ namespace Assets.Level1.Scripts
     {
         [SerializeField] private Camera _puzzleCamera;
         private Piece _takenPiece;
-        private bool _pieceIsTaken;
         private void Update()
         {
             Vector3 startRay = _puzzleCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -14,22 +13,19 @@ namespace Assets.Level1.Scripts
             if (Input.GetMouseButton(0))
             {
                 RaycastHit2D hit = Physics2D.Raycast(startRay, Vector2.zero);
-                if (!_pieceIsTaken)
+                if (_takenPiece == null)
                 {
                     if (hit.collider != null)
                     {
                         _takenPiece = hit.collider.GetComponent<Piece>();
-                        if (_takenPiece)
-                        {
-                            _pieceIsTaken = true;
-                        }
-
+                        _takenPiece.UpSortingOrder();
                     }
                 }
             }
-            if (_pieceIsTaken)
+            if (_takenPiece != null)
             {
-                Vector3 positionToMove = _puzzleCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+                float distanceFromCamera = 10;
+                Vector3 positionToMove = _puzzleCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceFromCamera));
                 _takenPiece.transform.position = positionToMove;
             }
 
@@ -40,15 +36,14 @@ namespace Assets.Level1.Scripts
                     if (_takenPiece.GetComponent<Collider2D>().enabled)
                     {
                         _takenPiece.CheckDistanceToRightPosition();
-                        _takenPiece.GetToRightPosition();
                     }
+                    _takenPiece.DownSortingOrder();
+                    _takenPiece = null;
                 }
-                _pieceIsTaken = false;
 
             }
 
         }
-
     }
 }
 

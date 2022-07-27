@@ -5,8 +5,8 @@ namespace Assets.Level1.Scripts
 {
     public class PuzzleCompletion : MonoBehaviour
     {
-        [SerializeField] private Piece[] _allPieces;
-        [SerializeField] private int _currentPiecesCompleted;
+        private Piece[] _allPieces;
+        private int _currentPiecesCompleted;
         [SerializeField] private PuzzleMove _puzzleMove;
         public Action OnPuzzleCompleted;
         private void Start() =>

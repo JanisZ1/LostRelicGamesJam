@@ -9,8 +9,10 @@ namespace Assets.Level1.Scripts
         [SerializeField] private Camera _platformerCamera;
         [SerializeField] private Canvas _canvas;
         [SerializeField] private PlatformerPlayerMove _playerMove;
-        private void Start() => 
+        private void Start() =>
             _puzzleCompletion.OnPuzzleCompleted += ChangePlayZone;
+        private void OnDisable() =>
+           _puzzleCompletion.OnPuzzleCompleted -= ChangePlayZone;
         private void ChangePlayZone()
         {
             _puzzleCamera.enabled = false;
@@ -18,8 +20,6 @@ namespace Assets.Level1.Scripts
             _canvas.gameObject.SetActive(true);
             _playerMove.gameObject.SetActive(true);
         }
-        private void OnDisable() => 
-            _puzzleCompletion.OnPuzzleCompleted -= ChangePlayZone;
     }
 }
 

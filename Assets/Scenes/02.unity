@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec572d3256e72ae4ea78c5d8597673bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _crashSound: {fileID: 589027073}
+  _audioSource: {fileID: 589027073}
   _intersectionChecker: {fileID: 1313197678}
 --- !u!1 &597812867
 GameObject:
@@ -7351,6 +7351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _intersectionChecker: {fileID: 1313197678}
+  _crashSound: {fileID: 589027075}
 --- !u!4 &1855169030
 Transform:
   m_ObjectHideFlags: 0
@@ -8406,7 +8407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _intersectionChecker: {fileID: 1313197678}
-  _powerUpSound: {fileID: 2086597549}
+  _audioSource: {fileID: 2086597549}
 --- !u!1 &2091184302
 GameObject:
   m_ObjectHideFlags: 0
