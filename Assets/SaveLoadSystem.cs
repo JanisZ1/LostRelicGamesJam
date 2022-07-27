@@ -6,29 +6,39 @@ public class SaveLoadSystem : MonoBehaviour
 {
     public int _openedLevelsCount = 1;
     private OpenLevelsUI _openLevelsUI;
-    private void Awake() => 
+    private const string _saveLoadKey = "OpenedLevels";
+    private bool _firstTimeInGame;
+    private void Awake() =>
         DontDestroyOnLoad(this);
     private void Start() =>
         CheckForFirstTimeInGame();
     private void Update() =>
         CheckCurrentSceneForMenu();
-    private void CheckForFirstTimeInGame()
+    private void CheckForFirstTimeInGame() =>
+        _firstTimeInGame = !PlayerPrefs.HasKey(_saveLoadKey);
+
+    private void OnApplicationQuit()
     {
-        if (!PlayerPrefs.HasKey("OpenedLevels")) SceneManager.LoadSceneAsync("01");
+        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "01")
+            PlayerPrefs.SetInt(_saveLoadKey, _openedLevelsCount);
     }
-    private void OnApplicationQuit() =>
-       PlayerPrefs.SetInt("OpenedLevels", _openedLevelsCount);
+
     public void CheckCurrentSceneForMenu()
     {
-        if (SceneManager.GetActiveScene().name == "Menu" && _openedLevelsCount >= PlayerPrefs.GetInt("OpenedLevels"))
+        if (_firstTimeInGame && SceneManager.GetActiveScene().name == "Menu")
         {
-            PlayerPrefs.SetInt("OpenedLevels", _openedLevelsCount);
+            _openLevelsUI = FindObjectOfType<OpenLevelsUI>();
+            _openLevelsUI.ShowFirstTimeInGameLevelButton();
+        }
+        else if (SceneManager.GetActiveScene().name == "Menu" && _openedLevelsCount >= PlayerPrefs.GetInt(_saveLoadKey))
+        {
+            PlayerPrefs.SetInt(_saveLoadKey, _openedLevelsCount);
             _openLevelsUI = FindObjectOfType<OpenLevelsUI>();
             _openLevelsUI.ShowOpenedLevels(_openedLevelsCount);
         }
         else if (SceneManager.GetActiveScene().name == "Menu")
         {
-            _openedLevelsCount = PlayerPrefs.GetInt("OpenedLevels");
+            _openedLevelsCount = PlayerPrefs.GetInt(_saveLoadKey);
             _openLevelsUI = FindObjectOfType<OpenLevelsUI>();
             _openLevelsUI.ShowOpenedLevels(_openedLevelsCount);
         }
@@ -36,7 +46,7 @@ public class SaveLoadSystem : MonoBehaviour
 #if UNITY_EDITOR
     [MenuItem("Edit/DeleteSave1")]
     public static void DeleteSave() =>
-        PlayerPrefs.DeleteKey("OpenedLevels");
+        PlayerPrefs.DeleteKey(_saveLoadKey);
 #endif
     public void SaveCompletedLevel()
     {
@@ -46,5 +56,5 @@ public class SaveLoadSystem : MonoBehaviour
             _openedLevelsCount++;
         }
     }
-   
+
 }

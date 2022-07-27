@@ -10,7 +10,7 @@ namespace Assets.Level2.Scripts
         [SerializeField] private CrashSound _crashSound;
         private void Start() =>
             _intersectionChecker.OnLose += RestartCurrentLevel;
-        private void RestartCurrentLevel() => 
+        private void RestartCurrentLevel() =>
             StartCoroutine(RestartLevel());
         private IEnumerator RestartLevel()
         {
