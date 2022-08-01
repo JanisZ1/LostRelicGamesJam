@@ -6,7 +6,7 @@ namespace Assets.Level1.Scripts
     public class PuzzleCompletion : MonoBehaviour
     {
         private Piece[] _allPieces;
-        [SerializeField] private int _currentPiecesCompleted;
+        private int _currentPiecesCompleted;
         [SerializeField] private float _distanceToAttach = 0.3f;
         public Action OnPuzzleCompleted;
         private void Start() =>

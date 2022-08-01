@@ -11457,6 +11457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9020fa2022d00574cb7f9d4bfdf0bf26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentPiecesCompleted: 0
   _distanceToAttach: 0.3
 --- !u!4 &1052366504
 Transform:
@@ -13484,7 +13485,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 62
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 1.01
