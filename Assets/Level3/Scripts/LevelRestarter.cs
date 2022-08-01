@@ -5,10 +5,14 @@ namespace Assets.Level3.Scripts
 {
     public class LevelRestarter : MonoBehaviour
     {
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-        }
+        [SerializeField] private LoseChecker _loseChecker;
+        private void Start() =>
+            _loseChecker.OnLose += RestartLevel;
+        private void OnEnable() => 
+            _loseChecker.OnLose += RestartLevel;
+        private void OnDisable() => 
+            _loseChecker.OnLose -= RestartLevel;
+        private void RestartLevel() =>
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 }
