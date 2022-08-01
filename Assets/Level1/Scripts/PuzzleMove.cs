@@ -5,6 +5,7 @@ namespace Assets.Level1.Scripts
     public class PuzzleMove : MonoBehaviour
     {
         [SerializeField] private Camera _puzzleCamera;
+        [SerializeField] private PuzzleCompletion _puzzleCompletion;
         private Piece _takenPiece;
         private void Update()
         {
@@ -35,7 +36,7 @@ namespace Assets.Level1.Scripts
                 {
                     if (_takenPiece.GetComponent<Collider2D>().enabled)
                     {
-                        _takenPiece.CheckDistanceToRightPosition();
+                        _puzzleCompletion.CheckDistanceToRightPosition(_takenPiece);
                     }
                     _takenPiece.DownSortingOrder();
                     _takenPiece = null;

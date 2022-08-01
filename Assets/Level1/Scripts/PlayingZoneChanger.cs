@@ -16,6 +16,8 @@ namespace Assets.Level1.Scripts
             if (PlayerPrefs.HasKey(_saveLoadKey))
                 Invoke(nameof(ChangePlayZone), 0f);
         }
+        private void OnEnable() => 
+            _puzzleCompletion.OnPuzzleCompleted += ChangePlayZone;
 
         private void OnDisable() =>
            _puzzleCompletion.OnPuzzleCompleted -= ChangePlayZone;
