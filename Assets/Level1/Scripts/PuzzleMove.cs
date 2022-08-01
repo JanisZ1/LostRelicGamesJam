@@ -7,6 +7,9 @@ namespace Assets.Level1.Scripts
         [SerializeField] private Camera _puzzleCamera;
         [SerializeField] private PuzzleCompletion _puzzleCompletion;
         private Piece _takenPiece;
+        private bool _soundIsPlaying;
+        [SerializeField] private AudioSource _puzzlePickSound;
+        [SerializeField] private AudioSource _puzzlePutSound;
         private void Update()
         {
             Vector3 startRay = _puzzleCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -20,6 +23,12 @@ namespace Assets.Level1.Scripts
                     {
                         _takenPiece = hit.collider.GetComponent<Piece>();
                         _takenPiece.UpSortingOrder();
+                        if (!_soundIsPlaying)
+                        {
+                            _puzzlePickSound.Play();
+                            _soundIsPlaying = true;
+                        }
+
                     }
                 }
             }
@@ -40,6 +49,12 @@ namespace Assets.Level1.Scripts
                     }
                     _takenPiece.DownSortingOrder();
                     _takenPiece = null;
+                    if (_soundIsPlaying)
+                    {
+                        _puzzlePutSound.Play();
+                        _soundIsPlaying = false;
+                    }
+
                 }
 
             }

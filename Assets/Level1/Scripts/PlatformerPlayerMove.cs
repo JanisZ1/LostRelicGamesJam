@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Assets.Level1.Scripts
@@ -11,6 +12,7 @@ namespace Assets.Level1.Scripts
         [SerializeField] private int _maxNumberOfJumps;
         private int _currentJumps;
         private CollisionChecker _collisionChecker;
+        public event Action OnJump;
         private void Awake() =>
             _collisionChecker = GetComponent<CollisionChecker>();
         private void Update() =>
@@ -26,6 +28,7 @@ namespace Assets.Level1.Scripts
             {
                 _rigidbody.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
                 _currentJumps++;
+                OnJump?.Invoke();
             }
         }
         private void FixedUpdate()
@@ -38,7 +41,7 @@ namespace Assets.Level1.Scripts
             if (_currentJumps == _maxNumberOfJumps && _collisionChecker.IsGrounded)
                 _currentJumps = 0;
         }
-        public void EnableDoubleJump() => 
+        public void EnableDoubleJump() =>
             _maxNumberOfJumps = 2;
     }
 }
