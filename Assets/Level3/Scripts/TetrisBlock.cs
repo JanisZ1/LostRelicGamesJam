@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Assets.Level3.Scripts
@@ -11,9 +12,13 @@ namespace Assets.Level3.Scripts
         public static int Width = 10;
         private static Transform[,] _grid = new Transform[Width, Height];
         [SerializeField] private ScoreManager _scoreManager;
-
-        private void Start() =>
+        private LoseChecker _loseChecker;
+        private void Start()
+        {
             _scoreManager = FindObjectOfType<ScoreManager>();
+            _loseChecker = FindObjectOfType<LoseChecker>();
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
@@ -96,9 +101,14 @@ namespace Assets.Level3.Scripts
         {
             foreach (Transform children in transform)
             {
+                _loseChecker.CheckLose(this);
                 int roundedX = Mathf.RoundToInt(children.transform.position.x);
                 int roundedY = Mathf.RoundToInt(children.transform.position.y);
-                _grid[roundedX, roundedY] = children;
+                if (children.position.y < Height)
+                {
+                    _grid[roundedX, roundedY] = children;
+                }
+                
             }
         }
         private bool ValidMove()
