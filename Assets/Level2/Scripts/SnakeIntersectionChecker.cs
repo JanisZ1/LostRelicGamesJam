@@ -16,7 +16,16 @@ namespace Assets.Level2.Scripts
             _intersectionObjectsStorage.OnDataChange += CheckIntersection;
             _snakeFoodStorage.OnDataChange += CheckIntersectionWithFood;
         }
-
+        private void OnEnable()
+        {
+            _intersectionObjectsStorage.OnDataChange += CheckIntersection;
+            _snakeFoodStorage.OnDataChange += CheckIntersectionWithFood;
+        }
+        private void OnDisable()
+        {
+            _intersectionObjectsStorage.OnDataChange -= CheckIntersection;
+            _snakeFoodStorage.OnDataChange -= CheckIntersectionWithFood;
+        }
         public void CheckIntersection(Vector3Int snakeHeadPosition, IEnumerable<Vector3Int> collection)
         {
             Debug.Log(collection.Count());
@@ -33,10 +42,6 @@ namespace Assets.Level2.Scripts
             }
 
         }
-        private void OnDisable()
-        {
-            _intersectionObjectsStorage.OnDataChange -= CheckIntersection;
-            _snakeFoodStorage.OnDataChange -= CheckIntersectionWithFood;
-        }
+
     }
 }

@@ -436,8 +436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &25008029
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,8 +625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &25510366
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,8 +814,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &26882514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,8 +1339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &67103272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,8 +1528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &83134559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,8 +1801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &96910776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,8 +2101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &149670003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,8 +2290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &159192030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,8 +2479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &166862595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,8 +2668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &187034116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,8 +2857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &231927401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,8 +3046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &234342792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,8 +3235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &237692021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,8 +3747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &264807869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,8 +4114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &293128024
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,8 +4303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &301197698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,8 +5120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &411144560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5551,8 +5517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &444526423
 GameObject:
   m_ObjectHideFlags: 0
@@ -5776,8 +5740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &449443786
 GameObject:
   m_ObjectHideFlags: 0
@@ -6447,8 +6409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &532728608
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,8 +6598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &537943374
 GameObject:
   m_ObjectHideFlags: 0
@@ -6829,8 +6787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &550587963
 GameObject:
   m_ObjectHideFlags: 0
@@ -7020,8 +6976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &567280631
 GameObject:
   m_ObjectHideFlags: 0
@@ -7211,8 +7165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &568351650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,8 +7840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &648411276
 GameObject:
   m_ObjectHideFlags: 0
@@ -8163,8 +8113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &675629894
 GameObject:
   m_ObjectHideFlags: 0
@@ -8438,8 +8386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &713674127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8629,8 +8575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &718211170
 GameObject:
   m_ObjectHideFlags: 0
@@ -9473,8 +9417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &853467872
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,8 +9690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &877233256
 GameObject:
   m_ObjectHideFlags: 0
@@ -10009,8 +9949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &921185666
 GameObject:
   m_ObjectHideFlags: 0
@@ -10479,8 +10417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &989143280
 GameObject:
   m_ObjectHideFlags: 0
@@ -10670,8 +10606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &991999088
 GameObject:
   m_ObjectHideFlags: 0
@@ -11069,8 +11003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1013959573
 GameObject:
   m_ObjectHideFlags: 0
@@ -11268,7 +11200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9020fa2022d00574cb7f9d4bfdf0bf26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _puzzleMove: {fileID: 1544078549}
+  _distanceToAttach: 0.3
 --- !u!4 &1052366504
 Transform:
   m_ObjectHideFlags: 0
@@ -11651,8 +11583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1104742351
 GameObject:
   m_ObjectHideFlags: 0
@@ -11842,8 +11772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1139445685
 GameObject:
   m_ObjectHideFlags: 0
@@ -12201,8 +12129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1154466940
 GameObject:
   m_ObjectHideFlags: 0
@@ -12476,8 +12402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1163696585
 GameObject:
   m_ObjectHideFlags: 0
@@ -12791,8 +12715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1167408359
 GameObject:
   m_ObjectHideFlags: 0
@@ -13443,8 +13365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1238172809
 GameObject:
   m_ObjectHideFlags: 0
@@ -13634,8 +13554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1255464453
 GameObject:
   m_ObjectHideFlags: 0
@@ -14541,8 +14459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1425060952
 GameObject:
   m_ObjectHideFlags: 0
@@ -14766,8 +14682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1436610529
 GameObject:
   m_ObjectHideFlags: 0
@@ -14988,8 +14902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1454027307
 GameObject:
   m_ObjectHideFlags: 0
@@ -15391,8 +15303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1479590450
 GameObject:
   m_ObjectHideFlags: 0
@@ -16173,8 +16083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1544078548
 GameObject:
   m_ObjectHideFlags: 0
@@ -16205,6 +16113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _puzzleCamera: {fileID: 1801815036}
+  _puzzleCompletion: {fileID: 1052366503}
 --- !u!4 &1544078550
 Transform:
   m_ObjectHideFlags: 0
@@ -16409,8 +16318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1585003035
 GameObject:
   m_ObjectHideFlags: 0
@@ -16768,8 +16675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1634695688
 GameObject:
   m_ObjectHideFlags: 0
@@ -17043,8 +16948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1700823530
 GameObject:
   m_ObjectHideFlags: 0
@@ -17654,8 +17557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1759198096
 GameObject:
   m_ObjectHideFlags: 0
@@ -18283,8 +18184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1808250462
 GameObject:
   m_ObjectHideFlags: 0
@@ -18630,8 +18529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1853925526
 GameObject:
   m_ObjectHideFlags: 0
@@ -19237,8 +19134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1928964661
 GameObject:
   m_ObjectHideFlags: 0
@@ -19579,8 +19474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1933578801
 GameObject:
   m_ObjectHideFlags: 0
@@ -19770,8 +19663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &1942910321
 GameObject:
   m_ObjectHideFlags: 0
@@ -20640,8 +20531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &2065025811
 GameObject:
   m_ObjectHideFlags: 0
@@ -20831,8 +20720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &2085272862
 GameObject:
   m_ObjectHideFlags: 0
@@ -21267,8 +21154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &2103343664
 GameObject:
   m_ObjectHideFlags: 0
@@ -21542,8 +21427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &2129293567
 GameObject:
   m_ObjectHideFlags: 0
@@ -21733,8 +21616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223827775bfb14d4fab0408b7240f9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToAttach: 0.3
-  _puzzleCompletion: {fileID: 1052366503}
 --- !u!1 &2141118004
 GameObject:
   m_ObjectHideFlags: 0
