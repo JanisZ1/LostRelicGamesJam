@@ -6,9 +6,14 @@ namespace Assets.Level1.Scripts
     public class LevelFinish : MonoBehaviour
     {
         private SaveLoadSystem _saveLoadSystem;
+        private PuzzleCompletion _puzzleCompletion;
         private const string _sceneName = "02";
-        private void Start() => 
+        private void Start()
+        {
             _saveLoadSystem = FindObjectOfType<SaveLoadSystem>();
+            _puzzleCompletion = FindObjectOfType<PuzzleCompletion>();
+            _puzzleCompletion.OnPuzzleCompleted += SaveLevel;
+        }
         private void OnTriggerEnter2D(Collider2D collider)
         {
             if (collider.GetComponent<PlatformerPlayerMove>())
@@ -17,5 +22,7 @@ namespace Assets.Level1.Scripts
                 SceneManager.LoadSceneAsync(_sceneName);
             }
         }
+        private void SaveLevel() =>
+            _saveLoadSystem.SaveCompletedLevel();
     }
 }

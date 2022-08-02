@@ -7,7 +7,8 @@ namespace Assets.Level1.Scripts
         [SerializeField] private PuzzleCompletion _puzzleCompletion;
         [SerializeField] private Camera _puzzleCamera;
         [SerializeField] private Camera _platformerCamera;
-        [SerializeField] private Canvas _canvas;
+        [SerializeField] private Canvas _platformerCanvas;
+        [SerializeField] private Canvas _puzzleCanvas;
         [SerializeField] private PlatformerPlayerMove _playerMove;
         private const string _saveLoadKey = "OpenedLevels";
         private void Start()
@@ -26,7 +27,8 @@ namespace Assets.Level1.Scripts
             Debug.Log("ChangePlayZone");
             _puzzleCamera.enabled = false;
             _platformerCamera.enabled = true;
-            _canvas.gameObject.SetActive(true);
+            _platformerCanvas.gameObject.SetActive(true);
+            _puzzleCanvas.gameObject.SetActive(false);
             _playerMove.gameObject.SetActive(true);
         }
     }
