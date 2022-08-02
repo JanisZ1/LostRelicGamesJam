@@ -9,6 +9,7 @@ namespace Assets.Level4.Scripts
         [SerializeField] private Bullet _bullet;
         [SerializeField] private Transform _shotPoint;
         [SerializeField] private float _reloadTime;
+        [SerializeField] private AudioSource _shotSound;
         private bool _gunReloaded = true;
         public virtual void Shoot() =>
             Instantiate(_bullet, _shotPoint.transform.position, _shotPoint.rotation);
@@ -17,6 +18,7 @@ namespace Assets.Level4.Scripts
             if (Input.GetMouseButton(0) && _gunReloaded) 
             {
                 Shoot();
+                _shotSound.Play();
                 _gunReloaded = false;
                 StartCoroutine(ReloadGun());
             }

@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Assets.Level3.Scripts
 {
+    [RequireComponent(typeof(AudioSource))]
     public class TetrisBlock : MonoBehaviour
     {
         public Vector3 RotationPoint;
@@ -13,8 +14,10 @@ namespace Assets.Level3.Scripts
         private static Transform[,] _grid = new Transform[Width, Height];
         [SerializeField] private ScoreManager _scoreManager;
         private LoseChecker _loseChecker;
+        private AudioSource _lineCompletedSound;
         private void Start()
         {
+            _lineCompletedSound = GetComponent<AudioSource>();
             _scoreManager = FindObjectOfType<ScoreManager>();
             _loseChecker = FindObjectOfType<LoseChecker>();
         }
@@ -75,6 +78,7 @@ namespace Assets.Level3.Scripts
         }
         private void DeleteLine(int i)
         {
+            _lineCompletedSound.Play();
             for (int j = 0; j < Width; j++)
             {
                 _scoreManager.OnScoreAdd?.Invoke(1);
@@ -108,7 +112,7 @@ namespace Assets.Level3.Scripts
                 {
                     _grid[roundedX, roundedY] = children;
                 }
-                
+
             }
         }
         private bool ValidMove()
