@@ -51,10 +51,17 @@ public class SaveLoadSystem : MonoBehaviour
     public void SaveCompletedLevel()
     {
         int activeSceneName = int.Parse(SceneManager.GetActiveScene().name);
+        int levelsToSaveForFirstTimeInGame = 1;
+        if (_firstTimeInGame)
+        {
+            PlayerPrefs.SetInt(_saveLoadKey, levelsToSaveForFirstTimeInGame);
+            _firstTimeInGame = false;
+        }
         if (activeSceneName == _openedLevelsCount)
         {
             _openedLevelsCount++;
         }
+        
     }
 
 }

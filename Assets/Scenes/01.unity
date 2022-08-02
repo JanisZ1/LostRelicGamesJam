@@ -7472,7 +7472,8 @@ MonoBehaviour:
   _puzzleCompletion: {fileID: 1052366503}
   _puzzleCamera: {fileID: 1801815036}
   _platformerCamera: {fileID: 519420031}
-  _canvas: {fileID: 1167408362}
+  _platformerCanvas: {fileID: 1167408362}
+  _puzzleCanvas: {fileID: 1672823831}
   _playerMove: {fileID: 241560745}
 --- !u!4 &568351652
 Transform:
