@@ -25,6 +25,7 @@ namespace Assets.Level1.Scripts
         {
             piece.BoxCollider.enabled = false;
             piece.transform.position = piece.RightPosition;
+            piece.GetComponent<SpriteRenderer>().material.SetFloat("_OutlineEnabled", 0f);
             UpdatePuzzleCompletion();
         }
         private void UpdatePuzzleCompletion()
