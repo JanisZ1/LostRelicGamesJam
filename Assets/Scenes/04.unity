@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 1440021561}
   - component: {fileID: 1440021560}
   m_Layer: 0
-  m_Name: 427958__sieuamthanh__ngoi-sao-sang-choi
+  m_Name: BackGroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
